@@ -1,0 +1,9 @@
+desc "Export xcframework"
+lane :export_xcframework do
+  create_xcframework(
+    workspace: 'DemoFramework.xcworkspace',
+    scheme: 'DemoFramework',
+    destinations: ['iOS'],
+    xcframework_output_directory: 'Products/xcframeworks'
+  )
+end
